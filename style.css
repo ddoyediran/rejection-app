@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Oswald&family=Raleway&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;900&family=Open+Sans&family=Oswald&family=Raleway&display=swap");
 
 * {
   margin: 0;
@@ -46,6 +46,8 @@ body {
 .rejection-text-index {
   padding-bottom: 25px;
   color: black;
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 900px;
 }
 
 .win-more-text-index {
@@ -66,8 +68,8 @@ body {
 }
 
 .get-started-btn-index:hover {
-  background-color: rgb(253, 244, 207);
-  color: rgb(22, 22, 22);
+  background-color: rgb(11, 230, 84);
+  color: rgb(255, 255, 255);
   cursor: pointer;
   font-weight: bold;
 }

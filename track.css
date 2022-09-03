@@ -28,10 +28,14 @@
   flex-direction: column;
   margin-block-start: 1.5em;
   margin-block-end: 1.5em;
-  /* padding-block-start: 0.6em; */
-  padding: 1em;
+  padding: 1.5em;
   background-color: rgb(228, 228, 228);
   border-radius: 1em;
+}
+
+.input-label {
+  font-size: 1.3rem;
+  padding-block-start: 1em;
 }
 
 input[type="text"] {
@@ -40,12 +44,12 @@ input[type="text"] {
   padding-inline-start: 0.5em;
   border: none;
   border-bottom: 1.5px solid rgb(35, 55, 65);
+  border-radius: 0.2em;
   outline: none;
   margin-block-start: 1em;
   margin-block-end: 1em;
   background: none;
   font-size: 1rem;
-  /* color: rgb(11, 230, 84); */
 }
 
 .submit-button-track {
@@ -71,12 +75,6 @@ input[type="submit"]:hover {
   color: rgb(35, 55, 65);
   background-color: rgb(11, 230, 84);
 }
-
-/* height: 3rem;
-letter-spacing: -.02rem;
-line-height: 1.125rem;
-padding: 0 1.875rem;
-text-align: center; */
 
 @media (min-width: 900px) {
   body {
@@ -142,7 +140,6 @@ text-align: center; */
     font-size: 1.2rem;
     border-radius: 6.25rem;
     margin: 0 auto;
-    /* margin: 0 auto; */
   }
 
   input[type="submit"]:hover {

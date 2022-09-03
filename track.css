@@ -84,35 +84,37 @@ text-align: center; */
     background-repeat: no-repeat;
     background-position: center;
   }
+
+  .main-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 90%;
+    margin: 0 auto;
+    /* border: 2px solid red; */
+  }
+
+  .top-container-track {
+    margin: auto auto;
+  }
+
+  .track-form {
+    /* border: 2px solid yellow; */
+  }
+
   .header-rejection-text-track {
-    width: 100%;
     font-size: 3rem;
     font-weight: 700;
-    padding-block-end: 0.6em;
-    margin-block-start: 1.5em;
-    /* background-image: url("https://i1.wp.com/www.additudemag.com/wp-content/uploads/2021/01/Why-Rejection-is-Tougher_1920x1080.jpg"); */
+    color: rgb(35, 55, 65);
   }
 
   .subheader-paragraph-track {
     font-size: 1.4rem;
   }
 
-  .form-track {
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    margin: 0 auto;
-    margin-block-start: 1.5em;
-    margin-block-end: 1.5em;
-    /* padding-block-start: 0.6em; */
-    padding: 1em;
-    background-color: rgb(228, 228, 228);
-    border-radius: 1em;
-  }
-
   .input-label {
-    font-size: 1.2rem;
-    padding-inline-start: 3em;
+    font-size: 1.3rem;
+    padding-inline-start: 2.4em;
+    padding-block-start: 1.3em;
   }
 
   input[type="text"] {
@@ -121,13 +123,12 @@ text-align: center; */
     padding-inline-start: 0.5em;
     border: none;
     border-bottom: 1.5px solid rgb(35, 55, 65);
+    border-radius: 0.2em;
     outline: none;
     margin: 0 auto;
-    margin-block-start: 1em;
     margin-block-end: 1em;
     background: none;
     font-size: 1.2rem;
-    /* color: rgb(11, 230, 84); */
   }
 
   input[type="submit"] {

@@ -17,40 +17,46 @@
           <li><a href="#">Sign up</a></li>
         </ul>
       </nav>
+      <div class="main-container">
+        <div class="top-container-track center-content-track">
+          <h1 class="header-rejection-text-track">Rejection Calculator</h1>
+          <p class="subheader-paragraph-track">
+            Remember, YOU must be rejected by someone at least once per day.
+          </p>
+          <p class="subheader-paragraph-track">
+            How long can you make your rejection streak last?
+          </p>
+        </div>
 
-      <div class="top-container-track center-content-track">
-        <h1 class="header-rejection-text-track">Rejection Calculator</h1>
-        <p class="subheader-paragraph-track">
-          Remember, YOU must be rejected by someone at least once per day.
-        </p>
-      </div>
+        <div class="track-form center-content-track">
+          <!-- <p class="subheader-paragraph-track">
+            How long can you make your rejection streak last?
+          </p> -->
+          <form class="form-track" id="form-track" action="">
+            <label class="input-label" for="question"
+              >What did you asked?</label
+            >
+            <input
+              type="text"
+              id="question-field"
+              value=""
+              placeholder="What i asked"
+            />
 
-      <div class="track-form center-content-track">
-        <p class="subheader-paragraph-track">
-          How long can you make your rejection streak last?
-        </p>
-        <form class="form-track" id="form-track" action="">
-          <label class="input-label" for="question">What did you asked?</label>
-          <input
-            type="text"
-            id="question-field"
-            value=""
-            placeholder="What i asked"
-          />
+            <label class="input-label" for="">Who did you asked?</label>
+            <input
+              type="text"
+              id="who-field"
+              value=""
+              placeholder="Who i asked"
+            />
 
-          <label class="input-label" for="">Who did you asked?</label>
-          <input
-            type="text"
-            id="who-field"
-            value=""
-            placeholder="Who i asked"
-          />
-
-          <div class="submit-button-track">
-            <input type="submit" value="Accepted" />
-            <input type="submit" value="Rejected" />
-          </div>
-        </form>
+            <div class="submit-button-track">
+              <input type="submit" value="Accepted" />
+              <input type="submit" value="Rejected" />
+            </div>
+          </form>
+        </div>
       </div>
     </div>
   </body>

@@ -7,52 +7,110 @@ const rejectedBtn = document.getElementById("rejected-btn");
 acceptedBtn.addEventListener("click", function (event) {
   event.preventDefault();
   const score = 10;
-  console.log(questionAsked.value);
-  console.log(whoYouAsked.value);
+  //   console.log(questionAsked.value);
+  //   console.log(whoYouAsked.value);
+
+  // let dataToStore = {}
+
+  let dataObject = {};
+  //   let id = 0;
+  let id = generateUniqueId();
+  dataObject["question_asked"] = questionAsked.value;
+  dataObject["person_asked"] = whoYouAsked.value;
+
   if (questionAsked.value && whoYouAsked.value) {
-    // check if total in the storage
-    const totalScoreValue = localStorage.getItem("totalScore");
-    // const totalScoreKey = localStorage.key("totalScore");
-    // console.log(totalScoreValue);
-    if (!totalScoreValue) {
-      //console.log("Local storage is empty");
-      localStorage.setItem("totalScore", score);
+    // if no data in the localStorage
+    if (localStorage.length === 0) {
+      // store the score and data in localStorage
+      dataObject["id"] = id;
+      dataObject["totalScore"] = score;
+      localStorage.setItem("data", JSON.stringify([dataObject]));
       //   console.log(localStorage);
+      questionAsked.value = "";
+      whoYouAsked.value = "";
+      return;
     }
 
-    if (totalScoreValue) {
-      let value = parseInt(totalScoreValue) + score;
-      localStorage.setItem("totalScore", value);
-      console.log(localStorage);
+    // if data in the localStorage
+    if (localStorage.length > 0) {
+      let localStorageData = JSON.parse(localStorage.getItem("data"));
+      let currentTotalScore = localStorageData[localStorageData.length - 1];
+      let newTotalScore = currentTotalScore.totalScore + score;
+      dataObject["id"] = id;
+      dataObject["totalScore"] = newTotalScore;
+      localStorageData.push(dataObject);
+      localStorage.setItem("data", JSON.stringify(localStorageData));
+      questionAsked.value = "";
+      whoYouAsked.value = "";
+      return;
     }
     // display the total score
   }
 
   // Reset the value to empty string
-  questionAsked.value = "";
-  whoYouAsked.value = "";
+  //   questionAsked.value = "";
+  //   whoYouAsked.value = "";
 });
 
 rejectedBtn.addEventListener("click", function (event) {
   event.preventDefault();
   const score = 100;
+
+  let dataObject = {};
+  //   let id = 0;
+  let id = generateUniqueId();
+  dataObject["question_asked"] = questionAsked.value;
+  dataObject["person_asked"] = whoYouAsked.value;
+
   if (questionAsked.value && whoYouAsked.value) {
-    // check if total in the storage
-    const totalScoreValue = localStorage.getItem("totalScore");
-    // const totalScoreKey = localStorage.key("totalScore");
-    if (!totalScoreValue) {
-      localStorage.setItem("totalScore", score);
+    // if no data in the localStorage
+    if (localStorage.length === 0) {
+      // store the score and data in localStorage
+      dataObject["id"] = id;
+      dataObject["totalScore"] = score;
+      localStorage.setItem("data", JSON.stringify([dataObject]));
+      //   console.log(localStorage);
+      questionAsked.value = "";
+      whoYouAsked.value = "";
+      return;
     }
 
-    if (totalScoreValue) {
-      let value = parseInt(totalScoreValue) + score;
-      localStorage.setItem("totalScore", value);
-      console.log(localStorage);
+    // if data in the localStorage
+    if (localStorage.length > 0) {
+      let localStorageData = JSON.parse(localStorage.getItem("data"));
+      let currentTotalScore = localStorageData[localStorageData.length - 1];
+      let newTotalScore = currentTotalScore.totalScore + score;
+      dataObject["id"] = id;
+      dataObject["totalScore"] = newTotalScore;
+      localStorageData.push(dataObject);
+      localStorage.setItem("data", JSON.stringify(localStorageData));
+      questionAsked.value = "";
+      whoYouAsked.value = "";
+      return;
     }
     // display the total score
   }
 
   // Reset the value to empty string
-  questionAsked.value = "";
-  whoYouAsked.value = "";
+  //   questionAsked.value = "";
+  //   whoYouAsked.value = "";
 });
+
+// to save all the questions on localStorage
+// data to pass to LS: question number, questions "who and what",
+//    id, score/ totalScore, isRejected: true/ false, isAccepted: true/ false
+// Display total score to user
+// add a button to display all questions asked.
+
+/// Generate unique ID ///
+
+function generateUniqueId() {
+  let a = new Uint32Array(3);
+  window.crypto.getRandomValues(a);
+  return (
+    performance.now().toString(36) +
+    Array.from(a)
+      .map((A) => A.toString(36))
+      .join("")
+  ).replace(/\./g, "");
+}

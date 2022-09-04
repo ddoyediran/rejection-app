@@ -48,9 +48,9 @@ body {
 
 .rejection-text-index {
   padding-bottom: 25px;
-  color: black;
+  color: rgb(35, 55, 65);
   font-family: "Fira Sans", sans-serif;
-  font-weight: 900px;
+  font-weight: 900;
 }
 
 .win-more-text-index {
@@ -68,6 +68,7 @@ body {
 .get-started-btn-index {
   font-size: 1.3rem;
   font-weight: bold;
+  color: rgb(35, 55, 65);
   width: 9rem;
   height: 3rem;
   border: none;
@@ -82,7 +83,8 @@ body {
 }
 
 .bottom {
-  margin: 1em 0 0 3em;
+  margin: 1em 0 0 6em;
+  /* border: 2px red solid; */
 }
 
 .bottom li {

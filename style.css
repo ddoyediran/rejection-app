@@ -14,6 +14,111 @@ body {
   background-size: cover;
 }
 
+.parent-container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.top-container {
+  width: 100%;
+  /* border: 2px solid red; */
+  margin: 6em auto;
+  /* margin-block: 6em; */
+}
+
+.rejection-text-index {
+  color: rgb(35, 55, 65);
+  line-height: 1.2em;
+  font-size: 2.2rem;
+  text-align: center;
+  font-size: "Fira Sans", sans-serif;
+  font-weight: 900;
+  margin-block-start: 0.5em;
+  margin-block-end: 0.8em;
+}
+
+.win-more-text-index {
+  text-align: center;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  margin-block-end: 2em;
+}
+
+.win-more-span-text {
+  color: rgb(11, 230, 84);
+  text-transform: capitalize;
+}
+
+.get-started-container {
+  width: 100%;
+  border-bottom: 1.5px solid rgb(179, 183, 184);
+  padding-block: 2em;
+  text-align: center;
+}
+
+.get-started-btn-index {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  background-color: rgb(35, 55, 65);
+  width: 10rem;
+  height: 3rem;
+  border: none;
+  border-radius: 0.5em;
+}
+
+.get-started-btn-index:hover {
+  background-color: rgb(11, 230, 84);
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.bottom {
+  width: 100%;
+  margin-block: 2em;
+}
+
+.bottom-ul {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  text-decoration: none;
+  text-align: center;
+}
+
+.bottom li {
+  display: inline-block;
+}
+
+@media (min-width: 767px) {
+  .rejection-text-index {
+    text-transform: cap;
+    font-size: 5rem;
+    margin-block-start: 0.5em;
+    margin-block-end: 0.5em;
+  }
+
+  .win-more-text-index {
+    font-size: 1.5rem;
+    /* margin-block-end: 1em; */
+  }
+
+  .get-started-container {
+    width: 100%;
+    border: none;
+    /* border: 2px solid red; */
+    padding-block: 0em;
+  }
+
+  .get-started-btn-index {
+    font-size: 1.3rem;
+    width: 12rem;
+    height: 4rem;
+    border: none;
+    border-radius: 1em;
+  }
+}
+
 .main-navbar ul {
   /* margin: 0; */
 }
@@ -36,58 +141,4 @@ body {
   /* color: rgba(255, 255, 255, 0.8); */
   color: rgb(11, 230, 84);
   /* border-radius: 5px; */
-}
-
-.top-container {
-  margin: 9rem 0 1rem 7rem;
-  /* margin-left: 5rem;
-  margin-top: 5rem;
-  margin-bottom: 2rem; */
-  font-size: 1.3rem;
-}
-
-.rejection-text-index {
-  padding-bottom: 25px;
-  color: rgb(35, 55, 65);
-  font-family: "Fira Sans", sans-serif;
-  font-weight: 900;
-}
-
-.win-more-text-index {
-  color: black;
-}
-
-.win-more-span-text {
-  color: rgb(11, 230, 84);
-}
-
-.get-started-container {
-  margin: 1.5rem 0 0rem 7rem;
-}
-
-.get-started-btn-index {
-  font-size: 1.3rem;
-  font-weight: bold;
-  color: rgb(35, 55, 65);
-  width: 9rem;
-  height: 3rem;
-  border: none;
-  border-radius: 3px;
-}
-
-.get-started-btn-index:hover {
-  background-color: rgb(11, 230, 84);
-  color: rgb(255, 255, 255);
-  cursor: pointer;
-  font-weight: bold;
-}
-
-.bottom {
-  margin: 1em 0 0 6em;
-  /* border: 2px red solid; */
-}
-
-.bottom li {
-  display: inline-block;
-  padding: 1.4em;
 }

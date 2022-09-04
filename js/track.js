@@ -17,6 +17,8 @@ acceptedBtn.addEventListener("click", function (event) {
   let id = generateUniqueId();
   dataObject["question_asked"] = questionAsked.value;
   dataObject["person_asked"] = whoYouAsked.value;
+  dataObject["isAccepted"] = true;
+  dataObject["isRejected"] = false;
 
   if (questionAsked.value && whoYouAsked.value) {
     // if no data in the localStorage
@@ -61,6 +63,8 @@ rejectedBtn.addEventListener("click", function (event) {
   let id = generateUniqueId();
   dataObject["question_asked"] = questionAsked.value;
   dataObject["person_asked"] = whoYouAsked.value;
+  dataObject["isAccepted"] = false;
+  dataObject["isRejected"] = true;
 
   if (questionAsked.value && whoYouAsked.value) {
     // if no data in the localStorage
